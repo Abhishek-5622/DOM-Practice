@@ -25,7 +25,27 @@
     <p>Caps on!</p>
     <script>
       //Q- Write a script which keeps checking the password being entered. It should check if capslock is on or off if its on it should not allow to type and show "caps on" on screen, also it should only allow to type if the shift in pressed down.
-      
+let input = document.querySelector("input");
+input.addEventListener("keypress",function(e)
+{
+    if(event.getModifierState("CapsLock"))
+    {
+        alert("CapsLock is on. Plz Off the CapsLock to enter passsword!");
+        setTimeout(function()
+            {
+                input.value="";
+            },200)
+        
+    }
+    if(e.shiftKey!=true)
+    {
+        alert("Please press shift ley while enter password");
+        setTimeout(function()
+            {
+                input.value="";
+            },200)
+    }
+})      
     
     </script>
   </body>

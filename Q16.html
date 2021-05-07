@@ -17,7 +17,14 @@
     <script>
       // Q Write a single click event handler that helps to delete any list item when clicked on it, attach that handler to above list
 
-    
+    let li = document.querySelectorAll("li");
+    for(let i=0;i<li.length;i++)
+    {
+        li[i].addEventListener("click",function()
+        {
+            li[i].remove();
+        })
+    }
     </script>
   </body>
 </html>

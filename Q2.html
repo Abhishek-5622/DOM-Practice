@@ -43,7 +43,7 @@
         balls[idx- 1].style.opacity = 1;
       }
       idx++;
-      
+      //setTimeout function help to clear stack otherwise stack overflow occur occur
       setTimeout(function () {
         load(idx);
       }, 200);
